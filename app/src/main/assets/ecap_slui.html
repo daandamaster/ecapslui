@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>ECAP SLUI Inspectie (HTML WebView)</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#2563eb',
+              600: '#1d4ed8',
+              700: '#1e40af',
+              800: '#1e3a8a',
+              900: '#172554'
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body { -webkit-tap-highlight-color: transparent; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .tap-active:active { transform: scale(0.97); }
+  </style>
+</head>
+<body class="bg-[#f4f7fb] text-slate-800 antialiased min-h-screen flex flex-col">
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs">
+    <div class="px-4 py-2.5 flex items-center justify-between gap-3">
+      <div>
+        <h1 class="text-base font-bold text-slate-900 tracking-tight leading-none">ECAP SLUI</h1>
+        <p class="text-[11px] font-medium text-slate-500 tracking-wide mt-0.5">Originele HTML WebView</p>
+      </div>
+      <div class="flex items-center gap-2 text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-1.5 rounded-full border border-slate-200">
+        <span class="inline-flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-slate-400"></span>8 open</span>
+        <span class="inline-flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-amber-500"></span>3 melding</span>
+        <span class="inline-flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-500"></span>4 ok</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 px-3.5 pt-3 pb-10 max-w-xl mx-auto w-full space-y-4">
+    <section class="space-y-2">
+      <div class="flex items-center justify-between px-1">
+        <h2 class="text-base font-bold text-slate-900">Kantoorpand Zuidwest</h2>
+        <span class="text-[11px] font-semibold text-slate-500 uppercase bg-slate-200/70 px-2 py-0.5 rounded-md">ETB + WTB</span>
+      </div>
+
+      <article class="bg-white rounded-2xl border border-amber-200 p-3.5 space-y-3" data-purpose="inspection-item">
+        <div class="flex items-start justify-between gap-3">
+          <div class="space-y-0.5">
+            <div class="flex items-center gap-1.5">
+              <span class="text-[11px] font-bold text-slate-400">E02</span>
+              <span class="text-[10px] font-semibold text-rose-600 border border-rose-300 bg-rose-50 px-1.5 rounded">Kritiek</span>
+            </div>
+            <p class="text-[13px] font-medium text-slate-800">Aardlekschakelaars: testknop en werking</p>
+            <p class="text-[11px] text-amber-700/90">Schakelaar 2F weigert afschakeling bij 30mA testcyclus.</p>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0">
+            <button class="px-3 py-1.5 rounded-lg border border-slate-200 text-slate-700 bg-white text-xs tap-active">OK</button>
+            <button class="px-3 py-1.5 rounded-lg border-2 border-amber-600 text-amber-700 bg-amber-50 font-semibold text-xs tap-active">Melding</button>
+          </div>
+        </div>
+        <div class="pt-2 border-t border-slate-100 space-y-2">
+          <div class="text-[11px] font-medium text-slate-600">Hotlinked bewijsfoto's (E02)</div>
+          <div class="flex items-center gap-2 overflow-x-auto no-scrollbar">
+            <img alt="Verdeelkast detail" class="w-24 h-20 rounded-lg object-cover border border-slate-200 shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqKLW3zMD-l1CmJfffH-wBxoIrhPOpD9-jtzjzcI4C5RFs6lm_-AvrNG1_ZPFOeXV3Ln-EMTVSW43XforNksyRKfThP4yUUbc2lPHI9a6PUSmlprnP4KFy-VwsDy_0gInpx_NbgJGpMaZcKbxzMiZtZprOasdVBOa5CneobTCXEGNpNBmF4IuvT2UV3e1VBDnApUAwWkQJVQ1Ybas28_MsKyosOLeSVgEPy9QJgjk" />
+            <img alt="Aardlek meetwaarde" class="w-24 h-20 rounded-lg object-cover border border-slate-200 shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQTP5d-jQujxe5bHoOndYFVFZ1OGbevJ6ugyAwZrHaAkang3lIeA5TygrrnAf5Xxf0XYpIZybg1a4RIS55QKvsSYsdXYoHdqKmLJDGTpcfbpIJl8i91EUSzlffIh8VLw5jLso5ItFvFuJJ1mF3RJwX-7H2sK6aQwj7P7jG1Mt3zq9DZbT4aTJCLBeD_8kRX6qGC7mtk-gK9mvKzXQvrZzqRTbotcsRlmZbOnhkVjM" />
+            <img alt="Groepenkast" class="w-24 h-20 rounded-lg object-cover border border-slate-200 shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwpn5Sacjyk-s9NO1LsGI2WZocmnLIJd4vuOg7tWPh8CmYh5obsBygi6YXIfopIrE4x-XXrTIY3r44EEzUZTAFa5gC4cHx-xcPGLLzT7wbQj39P4-Ue6d1_Ed2B7LYzCvPdpMRLGzWtICSm6rfded5RkCgOjEAequlLfOnOrpll4Cz888QwsilBFGJk3G5QVEVw2ttzxuPaItK4evw4yzXYPHlPcr5TuyZ7O_woOc" />
+          </div>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-2xl border border-amber-200 p-3.5 space-y-3" data-purpose="inspection-item">
+        <div class="flex items-start justify-between gap-3">
+          <div class="space-y-0.5">
+            <div class="flex items-center gap-1.5">
+              <span class="text-[11px] font-bold text-slate-400">W02</span>
+              <span class="text-[10px] font-semibold text-blue-600 border border-blue-300 bg-blue-50 px-1.5 rounded">Advies</span>
+            </div>
+            <p class="text-[13px] font-medium text-slate-800">Ventilatie: filters en debieten</p>
+            <p class="text-[11px] text-amber-700/90">Filtercassettes F7 verzadigd, drukval boven grenswaarde.</p>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0">
+            <button class="px-3 py-1.5 rounded-lg border border-slate-200 text-slate-700 bg-white text-xs tap-active">OK</button>
+            <button class="px-3 py-1.5 rounded-lg border-2 border-amber-600 text-amber-700 bg-amber-50 font-semibold text-xs tap-active">Melding</button>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pt-2 border-t border-slate-100">
+          <img alt="Ventilatiefilter" class="w-24 h-20 rounded-lg object-cover border border-slate-200 shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIVp33_VF6fOukouWq-ohoPc3MzBO8uohNQRuKWaE74QPcNkmWVDIk9l4VqgZpFLl7XZ3J3z7opiD9Q8Dm1vTrfZLfresmd4cwoJ3BJCAOiPmoqnTnT3OgyZzgxS9fWOnpCON27kWZLEd2A7WPsgrkcxsSBTL8SN_2Z7uuQ5Fvkx7gdu7scnKgXgR6DwfNa-2k0lFUH2ZaLj17WRKpIFC0PS23s1QiD_1R0LkUc8o" />
+          <img alt="Expansievat W01" class="w-24 h-20 rounded-lg object-cover border border-slate-200 shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlRuEOQ8UrRJTI3zf-NmwPhBChhEuYzKUH0QHccHOzpaOj2UkmXppovz6cWG2vAobB-nyZByYstmJ350cUNs3-3hs_oa4tj4qouZQAZThqRneVKKTZ0h90lp2cB0WlLZ1uw2V9XO01Z6II1NI0WfSx0v-dvyBmV0ETS1wduVgcQjLVz5XDUji7GRta8Sy2EaJHhGvh5uygTmoS3502tN5AbL416vuKKj5oiYaIiW8" />
+          <img alt="Tapwater W03" class="w-24 h-20 rounded-lg object-cover border border-slate-200 shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy9BO9GQeG7xmR0wJvu1QBIXN-4Xg5GBxlIgBJkWyeTE0rcgq4zB-BjKsYybk13Zy-5QGw11uUERC60GaiPShkheUDJ4a4NIF4rh4Bk4idyHikAdfWRFw3_6GIR71OeJuPDDdhc7eDikCJdAFCztpIKmcmtJY-K89J78jDC2x1tyK27Uu4zBBDeKnJvZHya9fpJwwDI5Q-GpvAPpGFUNVu_A0M_XQX1nEACUhHNlk" />
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

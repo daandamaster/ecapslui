@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ECAP SLUI Inspectie</string>
+    <string name="app_subtitle">Inspectie</string>
+    <string name="nav_route">Route</string>
+    <string name="nav_punten">Punten</string>
+    <string name="nav_rapport">Rapport</string>
+    <string name="nav_assistent">Assistent</string>
+    <string name="nav_instellingen">Instellingen</string>
+    <string name="action_take_photo">Foto maken</string>
+    <string name="action_clear">Wissen</string>
+    <string name="action_finalize">Inspectierapport afronden &amp; ondertekenen</string>
+    <string name="action_ok">OK</string>
+    <string name="action_melding">Melding</string>
+    <string name="cd_menu">Menu openen</string>
+    <string name="cd_back">Terug</string>
+    <string name="cd_camera">Foto maken</string>
+    <string name="cd_evidence_photo">Bewijsfoto inspectiepunt</string>
+</resources>

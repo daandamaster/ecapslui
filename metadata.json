@@ -1,0 +1,6 @@
+{
+  "name": "ECAP SLUI Inspectie",
+  "description": "Mobiele ETB & WTB inspectie-app met hotlinked bewijsfoto's, digitale handtekening, AI-assistent en NEN 3140 / ISSO rapportage.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
